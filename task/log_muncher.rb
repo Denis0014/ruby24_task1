@@ -5,14 +5,20 @@
 # 2. Тест на ограниченном наборе
 # 3. Расстояние Левенштейна
 
-include Gem::Text
+require 'levenshtein'
+fname = 'data/test.txt'
 
-    def parse(fname)
-        
-    end
+def parse(fname)
+  f = File.open(fname)
+  s = f.readlines
+  l = []
+  for i in (1..s.length - 1)
+    l.push(s[i].split('=>')[1].strip)
+  end
+  for i in (1..s.length - 3)
+  end
+end
 
-    def levenshtein_distance(a, b):
-
-    end
+parse(fname)
 
  #  levenshtein_distance('asd', 'sdf') # => 2
